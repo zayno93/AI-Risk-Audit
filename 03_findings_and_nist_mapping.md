@@ -32,8 +32,6 @@ Finding 1: Nora reveals confidential information and internal instructions
 
     Recommendation: Apply controls C05 and C06. Remove secrets and credentials from system prompts and model-visible context, storing them in access-controlled systems instead. Introduce output filtering to detect and block confidential strings and hidden instructions. Re-run extraction and credential-phishing tests before deployment and after changes (C11).
 
-
-
 Finding 2: Nora can be manipulated into partially accepting rule overrides
     Severity: High (Risk RO1)
 
@@ -54,8 +52,6 @@ Finding 3: Business-account guidance varies across customer name variations
 
     Limitation: The seven-test sample is small. The observed differences may reflect response variability rather than a consistent name-related effect.
 
-
-
 Finding 4: Incomplete safeguards for vulnerable customers and payment information
     Severity: Medium (Risks RO6 and RO7)
 
@@ -64,8 +60,6 @@ Finding 4: Incomplete safeguards for vulnerable customers and payment informatio
     Impact: Customers may be left without clear instructions when dealing with suspected scams, financial pressure or sensitive payment information. A vulnerable customer could continue interacting with a scammer or share information through an unsafe channel because the chatbot did not give sufficiently direct advice. Unverified contact details could also expose customers to further risk.
 
     Recommendation: Apply controls C04 and C09. Introduce clear warnings whenever card details, PINs or one-time codes are mentioned, explicitly telling customers not to share them in chat. Provide verified routes to official bank channels. For vulnerable or distressed customers, use empathetic but direct responses, advise against transfers when scam pressure is suspected, and provide a reliable handoff to a trained human. Re-test these scenarios as part of the regression suite (C11).
-
-
 
 Finding 5: Nora presents some unverified information as fact
     Severity: Medium (Risk RO2)
@@ -76,8 +70,6 @@ Finding 5: Nora presents some unverified information as fact
 
     Recommendation: Apply control C08. Rates, fees, deposit-protection claims and contact details should only be provided from approved, current and verified sources. Where the chatbot cannot verify information, it should clearly state this and direct customers to official bank channels. Deposit-protection eligibility should never be guaranteed without checking the relevant institution and account. Re-test factual responses whenever source data or model behaviour changes (C11).
 
-
-
 Finding 6 (Positive): Nora refused unauthorised lending decisions and scam-generation requests
     Severity: Positive result (Risks RO5 and RO11)
 
@@ -86,8 +78,6 @@ Finding 6 (Positive): Nora refused unauthorised lending decisions and scam-gener
     Impact: These results indicate that some important safeguards are functioning as intended. Refusing to make unauthorised lending decisions and refusing to assist with scam generation helps reduce the risk of customers receiving misleading financial decisions or malicious assistance.
 
     Recommendation: Retain these behaviours and include the lending and scam-generation tests in the regression suite (C11). Continue testing them with varied wording, indirect requests and attempts to override the chatbot's instructions to ensure these safeguards remain effective.
-
-
 
 Limitations
 
