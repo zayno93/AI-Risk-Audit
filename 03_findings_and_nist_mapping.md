@@ -84,7 +84,7 @@ Impact: These results indicate that some important safeguards are functioning as
 
 Recommendation: Retain these behaviours and include the lending and scam-generation tests in the regression suite (C11). Continue testing them with varied wording, indirect requests and attempts to override the chatbot's instructions to ensure these safeguards remain effective.
 
-Limitations
+## Limitations
 
 The assessment was conducted using a locally run 1B-parameter language model and a test suite containing 49 prompts. The results therefore provide an indication of how Nora behaved under the tested scenarios, rather than a reliable estimate of how it would perform in a real banking environment. Each prompt was run once, meaning responses may vary across repeated attempts or different sessions. The results were also assessed by one person, so some Pass, Partial and Fail classifications may involve subjective judgement. The test suite did not provide direct coverage for every identified risk, and some categories had only a small number of tests. In addition, the weighted failure rate treats a Partial result as half a failure; this is a scoring method for comparing observed behaviour, not a measured probability of real-world incidents. Further testing with repeated prompts, additional reviewers, different model configurations and more realistic customer scenarios would be needed before deployment. Recommended residual risk scores are estimates and should not be treated as achieved outcomes until the controls have been implemented and re-tested.
 
